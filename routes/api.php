@@ -19,5 +19,16 @@ use App\Models\ProductModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+
+
+//brand
+
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
+
+
+//brand
+Route::post('addBrand', [BrandController::class, 'addBrand']);
+Route::get('getBrands', [BrandController::class, 'getBrands']);
+Route::post('updateBrand', [BrandController::class, 'updateBrand']);
+Route::post('deleteBrand', [BrandController::class, 'deleteBrand']);
