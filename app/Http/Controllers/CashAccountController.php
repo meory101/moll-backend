@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\CashAccountModel;
 use App\Models\ClientModel;
 use App\Models\User;
-use App\Models\WasityAccountModel;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 

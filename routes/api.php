@@ -19,7 +19,6 @@ use App\Http\Controllers\RateController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\SubBranchCotroller;
 use App\Http\Controllers\SubCategoryController;
-use App\Http\Controllers\WasityAccountController;
 use App\Models\ProductModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
