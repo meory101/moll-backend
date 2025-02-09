@@ -14,6 +14,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OTPController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RateController;
+use App\Http\Controllers\StoreController;
 use App\Http\Controllers\SubBranchCotroller;
 use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\WasityAccountController;
@@ -51,3 +52,23 @@ Route::post('addMoll', [MollController::class, 'addMoll']);
 Route::get('getMolls', [MollController::class, 'getMolls']);
 Route::post('updateMoll', [MollController::class, 'updateMoll']);
 Route::post('deleteMoll', [MollController::class, 'deleteMoll']);
+
+
+//store
+Route::post('addStore', [StoreController::class, 'addStore']);
+Route::get('getStores', [StoreController::class, 'getStores']);
+Route::post('updateStore', [StoreController::class, 'updateStore']);
+Route::post('deleteStore', [StoreController::class, 'deleteStore']);
+
+
+//product
+Route::post('addProduct', [ProductController::class, 'addProduct']);
+Route::get('getProducts', [ProductController::class, 'getProducts']);
+Route::post('updateProduct', [ProductController::class, 'updateProduct']);
+Route::post('deleteProduct', [ProductController::class, 'deleteProduct']);
+
+Route::post('getProductByCategoryId', [ProductController::class, 'getProductByCategoryId']);
+Route::post('getProductByBrandId', [ProductController::class, 'getProductByBrandId']);
+Route::post('getProductByStoreId', [ProductController::class, 'getProductByStoreId']);
+
+

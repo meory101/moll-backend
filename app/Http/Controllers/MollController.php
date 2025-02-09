@@ -37,7 +37,7 @@ class MollController extends Controller
     }
 
 
-    public function getMolls()
+    public function getStores()
     {
         $molls = Moll::all();
         if ($molls) {
@@ -47,7 +47,7 @@ class MollController extends Controller
     }
 
 
-    public function updateMoll(Request $request)
+    public function updateStore(Request $request)
     {
 
 
@@ -84,7 +84,7 @@ class MollController extends Controller
     }
 
 
-    public function deleteMoll(Request $request)
+    public function deleteStore(Request $request)
     {
         $moll =  Moll::find($request->id);
         $moll = $moll->delete();
