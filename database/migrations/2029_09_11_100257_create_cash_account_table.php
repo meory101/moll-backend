@@ -6,9 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * nour othman
-     */
+    
     public function up(): void
     {
         Schema::create('cash_account', function (Blueprint $table) {
