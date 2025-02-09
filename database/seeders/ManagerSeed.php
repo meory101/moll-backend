@@ -9,9 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 class ManagerSeed extends Seeder
 {
-    /**
-     * Eng Nour Othman
-     */
+  
     public function run(): void
     {
         DB::table('manager')->insert([
