@@ -9,9 +9,7 @@ use Illuminate\Support\Facades\DB;
 class VehicleSeed extends Seeder
 {
 
-    /**
-     * Eng Nour Othman
-     */
+    
     public function run(): void
     {
         DB::table('Vehicle')->insert([
