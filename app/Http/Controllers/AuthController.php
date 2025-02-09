@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CashAccountModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
@@ -13,7 +14,7 @@ class AuthController extends Controller
 {
     public function register(Request $request)
     {
-        $user =new User;
+        $user = new User;
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
@@ -21,15 +22,21 @@ class AuthController extends Controller
         $user->address = $request->address;
         $user->roleId = $request->roleId;
         $res = $user->save();
-        if($res){
+        $acc = new CashAccountModel;
+        $acc->number = "";
+        $acc->balance = 0;
+        $acc->userId = $user->id;
+        $acc->save();
+
+
+        if ($res) {
             return response()->json([
                 'user'  => $user,
-                'token' =>$user->createToken('token')->plainTextToken
+                'token' => $user->createToken('token')->plainTextToken
             ], 200);
-        }else{
+        } else {
             return response()->json([], 500);
         }
-      
     }
     public function login(Request $request)
     {
@@ -71,6 +78,4 @@ class AuthController extends Controller
             ]
         ]);
     }
-
 }
-

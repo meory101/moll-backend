@@ -9,8 +9,9 @@ use App\Models\WasityAccountModel;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class WasityAccountController extends Controller
+class CashAccountController extends Controller
 {
+
     public function changeBalance(Request $request)
     {
       

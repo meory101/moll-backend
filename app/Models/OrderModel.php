@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CashAccountModel extends Model
+class OrderModel extends Model
 {
     use HasFactory;
-    protected $table = 'cash_account';
+    protected $table = 'order';
+  
 }

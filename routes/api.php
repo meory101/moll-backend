@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\addressController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\CashAccountController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ClientDeliveryController;
@@ -72,3 +74,16 @@ Route::post('getProductByBrandId', [ProductController::class, 'getProductByBrand
 Route::post('getProductByStoreId', [ProductController::class, 'getProductByStoreId']);
 
 
+
+Route::post('getProductByCategoryId', [ProductController::class, 'getProductByCategoryId']);
+Route::post('getProductByBrandId', [ProductController::class, 'getProductByBrandId']);
+Route::post('getProductByStoreId', [ProductController::class, 'getProductByStoreId']);
+
+
+Route::post('changeBalance', [CashAccountController::class, 'changeBalance']);
+Route::post('getAccount', [CashAccountController::class, 'getAccount']);
+Route::post('getUsers', [CashAccountController::class, 'getUsers']);
+
+
+Route::post('getClientOrders', [OrderController::class, 'getClientOrders']);
+Route::post('addOrder', [OrderController::class, 'addOrder']);
