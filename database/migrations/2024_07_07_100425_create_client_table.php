@@ -6,20 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Eng Nour Othman
-     */
+
     public function up(): void
     {
-        Schema::create('client', function (Blueprint $table) {
+        Schema::create('user', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('email')->nullable();
-            $table->string('gender')->nullable();
-            $table->string('birth_date')->nullable();
-            $table->integer('points')->default(1000);
-            $table->string('number');
-            $table->string('image')->nullable();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->string('phone_number')->nullable();
+            $table->string('address')->nullable();
+            $table->string('profile_picture')->nullable();
+            $table->foreignId('roleId')->nullable()->constrained('role')->onDelete('cascade');
 
             $table->timestamps();
         });
